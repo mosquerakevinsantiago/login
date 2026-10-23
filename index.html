@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratorio local de autenticación y seguridad web">
+  <title>SECURELAB | Acceso seguro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/javascript.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="SECURELAB inicio">
+      <span class="brand-icon">S</span>
+      <span>SECURE<span class="accent">LAB</span></span>
+    </a>
+    <span class="environment">
+      <span class="status-dot"></span>
+      LABORATORIO LOCAL
+    </span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <span class="eyebrow">CYBERSECURITY TRAINING</span>
+      <h1>La seguridad<br>empieza por el <span class="accent">acceso.</span></h1>
+      <p>
+        Entorno de pruebas para estudiar autenticación,
+        sesiones y control de privilegios en aplicaciones web.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          <div>
+            <strong>Autenticación</strong>
+            <small>Verificación de credenciales en el servidor</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          <div>
+            <strong>Control de roles</strong>
+            <small>Permisos de usuario y administrador</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          <div>
+            <strong>Registro de eventos</strong>
+            <small>Seguimiento de accesos rechazados</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="shield">⬡</div>
+      <p class="eyebrow center">IDENTIFICACIÓN</p>
+      <h2 id="login-title">Bienvenido</h2>
+      <p class="subtitle">Ingresa a tu espacio de pruebas.</p>
+
+      <form id="login-form">
+        <label for="username">Nombre de usuario</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="Tu usuario"
+          autocomplete="username"
+          maxlength="50"
+          required
+        >
+
+        <label for="password">Contraseña</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Tu contraseña"
+          autocomplete="current-password"
+          maxlength="200"
+          required
+        >
+
+        <button type="submit" id="login-button">
+          Iniciar sesión <span>→</span>
+        </button>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="dashboard" class="dashboard" hidden>
+        <div class="divider"></div>
+        <p class="eyebrow">SESIÓN ACTIVA</p>
+        <h3>Panel de laboratorio</h3>
+        <p id="welcome"></p>
+
+        <button type="button" id="admin-button" class="secondary" hidden>
+          Comprobar acceso de administrador
+        </button>
+
+        <pre id="admin-result" hidden></pre>
+
+        <button type="button" id="logout-button" class="logout">
+          Cerrar sesión
+        </button>
+      </section>
+
+      <div class="security-note">
+        <span>▣</span>
+        <p>Sesión protegida mediante cookies HTTP-only.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>SECURELAB © 2026</span>
+    <span>Uso educativo · Entorno local</span>
+  </footer>
+</body>
+</html>
